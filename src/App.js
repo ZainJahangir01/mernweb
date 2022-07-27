@@ -58,11 +58,11 @@ function App() {
         <Route exact path="/service" element={<Services />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/contact" element={<Contact />} />
-        <Route exact path="/login" element={<Login />} />
+        {/* <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/dashboard" element={<Dashboard />} />
-        <Route exact path="/logout" element={<Logout />} />
-        {/* <Protectedroute exact path="/login" element={<Login />} auth={auth1} />
+        <Route exact path="/logout" element={<Logout />} /> */}
+        <Protectedroute exact path="/login" element={<Login />} auth={auth1} />
         <Protectedroute
           exact
           path="/register"
@@ -75,7 +75,7 @@ function App() {
           element={<Dashboard />}
           auth={auth}
         />
-        <Protectedroute exact path="/logout" element={<Logout />} auth={auth} /> */}
+        <Protectedroute exact path="/logout" element={<Logout />} auth={auth} />
       </Routes>
       <Footer />
     </>
